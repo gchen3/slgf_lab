@@ -4,6 +4,7 @@ project:
 
 website:
   title: "State and Local Government Finance Research Lab"
+  site-url: https://github.com/gchen3/slgf_lab #https://slgfrl.github.io/
   navbar:
     left:
       - href: index.qmd

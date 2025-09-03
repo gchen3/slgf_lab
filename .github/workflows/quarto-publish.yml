@@ -1,0 +1,29 @@
+name: Quarto Publish                 # you can rename the workflow
+
+on:
+  push:
+    branches: ["main"]               # change if your default branch isn't "main"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "quarto-publish"            # any string
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:                      # job id (you can rename)
+    runs-on: ubuntu-latest           # fixed runner OS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: false             # set true if you render PDFs/LaTeX
+      - name: Publish to GitHub Pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages           # fixed: deploys built site to gh-pages branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # fixed: provided by GitHub
