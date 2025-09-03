@@ -2,7 +2,7 @@ name: Quarto Publish                 # you can rename the workflow
 
 on:
   push:
-    branches: ["master"]               # change if your default branch isn't "main"
+    branches: ["main"]               # change if your default branch isn't "main"
 
 permissions:
   contents: write
