@@ -4,16 +4,17 @@ project:
 
 website:
   title: "State and Local Government Finance Research Lab"
-  site-url: "https://github.com/gchen3/slgf_lab" #https://slgfrl.github.io/
+  site-url: "https://gchen3.github.io/slgf_lab/"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - index_quarto.qmd
 
 format:
   html:
-    theme: cosmo
+    theme: Sandstone
     css: styles.css
     toc: true
 
