@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>State and Local Government Finance Research Lab</title>
+<title>Research Workflow – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,11 +93,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research-workflow.html"> 
+    <a class="nav-link active" href="./research-workflow.html" aria-current="page"> 
 <span class="menu-text">Research Workflow</span></a>
   </li>  
 </ul>
@@ -116,7 +116,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#current-projects" id="toc-current-projects" class="nav-link active" data-scroll-target="#current-projects">Current projects</a></li>
+  <li><a href="#core-principles" id="toc-core-principles" class="nav-link active" data-scroll-target="#core-principles">Core Principles</a></li>
+  <li><a href="#recommended-toolchain" id="toc-recommended-toolchain" class="nav-link" data-scroll-target="#recommended-toolchain">Recommended Toolchain</a></li>
+  <li><a href="#install-the-tools" id="toc-install-the-tools" class="nav-link" data-scroll-target="#install-the-tools">Install The Tools</a></li>
+  <li><a href="#general-research-workflow" id="toc-general-research-workflow" class="nav-link" data-scroll-target="#general-research-workflow">General Research Workflow</a></li>
+  <li><a href="#working-standard" id="toc-working-standard" class="nav-link" data-scroll-target="#working-standard">Working Standard</a></li>
   </ul>
 </nav>
     </div>
@@ -125,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">State and Local Government Finance Research Lab</h1>
+<h1 class="title">Research Workflow</h1>
 </div>
 
 
@@ -142,18 +146,138 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>State and Local Government Finance Research Lab (SLGF-Lab) is a research branch of the <a href="https://www.albany.edu/rockefeller/project-state-local-government-finance">State and Local Government Finance (SLGF) Project</a> at the Center for Policy Research at Rockefeller College, University at Albany SUNY. SLGF-Lab is led by Professor <a href="https://www.albany.edu/rockefeller/faculty/gang-chen">Gang Chen</a>, Co-Director of the SLGF Project. The lab focuses on research and graduate teaching on state and local government budgeting and financial management, using advanced econometric methods, simulations, and large-scale datasets.</p>
-<p>The research presented on this website is ongoing research and teaching projects that is being conducted in the lab.</p>
-<section id="current-projects" class="level3">
-<h3 class="anchored" data-anchor-id="current-projects">Current projects</h3>
-<p><strong>Municipal Tax Override Studies</strong></p>
-<p><em>Property Tax Overrides and Municipal Credit Ratings: Evidence from Massachusetts</em><br>
-A municipal tax override is a voter-approved measure that allows a city or town to temporarily raise property taxes beyond statutory limits. While overrides enable governments to generate additional revenue in response to rising public service costs, they may also undermine the purpose of statutory limits to promote fiscal sustainability. This study uses data from Massachusetts municipalities between 2003 and 2021 to examine the impact of overrides on credit ratings and future override support. Findings show that successful overrides are associated with improved credit ratings, but frequent overrides—and especially failed override attempts—can damage both credit ratings and future voter support.</p>
-<p><strong>Rural School Finances Studies</strong></p>
-<p><em>Examining the Impact of Legacy Costs on New York State Rural Schools</em><br>
-This research focuses on the growing burden of “legacy costs” (pensions, retiree healthcare, and capital project maintenance) in rural school districts in Upstate New York facing declining enrollments. These costs consume an increasing share of budgets, crowding out instructional spending and straining schools’ financial capacity. Using detailed data from New York State, this study quantifies the scale and trends of legacy costs, compares rural and non-rural districts, and assesses their impact on school budgets and operations.</p>
-<p><em>Examining the Causes and Status of Fiscal Stress in Rural Schools of New York State</em><br>
-Rural school districts in New York face shrinking enrollments, limited tax bases, and rising fixed costs, putting them at heightened risk of fiscal stress. This study analyzes the status, causes, and consequences of fiscal stress across rural schools using comprehensive financial indicators—such as fund balance, liquidity, and debt ratios—and compares them with non-rural districts. The findings inform policymakers and educators about the drivers of fiscal stress, contributing to policy solutions aimed at reducing inequalities and improving educational equity across the state.</p>
+<p>The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.</p>
+<section id="core-principles" class="level3">
+<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
+<p>Good research workflow should make each project:</p>
+<ul>
+<li><strong>Reproducible:</strong> another researcher can rerun the analysis from the project files.</li>
+<li><strong>Traceable:</strong> important changes are recorded in version control.</li>
+<li><strong>Readable:</strong> data notes, code, outputs, and interpretation are organized in one project.</li>
+<li><strong>Recoverable:</strong> mistakes can be corrected without losing prior work.</li>
+<li><strong>Collaborative:</strong> work can be shared, reviewed, and improved through GitHub.</li>
+<li><strong>Human-led:</strong> AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.</li>
+</ul>
+</section>
+<section id="recommended-toolchain" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-toolchain">Recommended Toolchain</h3>
+<p>The lab’s default workflow combines:</p>
+<ul>
+<li><strong>Positron</strong> (Or VS Code)<strong>:</strong> an integrated development environment for R, Python, Quarto, and Git.</li>
+<li><strong>R or Python:</strong> statistical programming languages for data cleaning, analysis, modeling, and visualization.</li>
+<li><strong>Quarto:</strong> reproducible reporting for combining text, code, tables, figures, and results.</li>
+<li><strong>Git and GitHub:</strong> version control, backup, collaboration, and publication workflows.</li>
+<li><strong>AI coding assistants:</strong> Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.</li>
+</ul>
+</section>
+<section id="install-the-tools" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-tools">Install The Tools</h3>
+<p>Install Positron (Or VS Code)</p>
+<p><a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></p>
+<p>Install R:</p>
+<p><a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></p>
+<p>Install Python if a project uses Python:</p>
+<p><a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></p>
+<p>Install Git:</p>
+<p><a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a></p>
+<p>Create a GitHub account:</p>
+<p><a href="https://github.com/" class="uri">https://github.com/</a></p>
+<p>Use Quarto through Positron when possible. Quarto can also be installed separately:</p>
+<p><a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a></p>
+<p>AI assistants can be added depending on access and preference:</p>
+<ul>
+<li>Codex: <a href="https://chatgpt.com/codex" class="uri">https://chatgpt.com/codex</a></li>
+<li>GitHub Copilot: <a href="https://github.com/features/copilot" class="uri">https://github.com/features/copilot</a></li>
+<li>Claude Code: <a href="https://www.anthropic.com/claude-code" class="uri">https://www.anthropic.com/claude-code</a></li>
+</ul>
+</section>
+<section id="general-research-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="general-research-workflow">General Research Workflow</h3>
+<section id="create-a-project-repository" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-project-repository">1. Create A Project Repository</h4>
+<p>Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.</p>
+<p>Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized. The everyday Git workflow is simple:</p>
+<pre class="text"><code>Edit -&gt; Save -&gt; Stage -&gt; Commit -&gt; Push</code></pre>
+<p>Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in .gitignore to prevent them from being tracked.</p>
+</section>
+<section id="document-project-context" class="level4">
+<h4 class="anchored" data-anchor-id="document-project-context">3. Document Project Context</h4>
+<p>Before analysis begins, create a short project context file, such as <code>project_context.md</code>. It should state:</p>
+<ul>
+<li>the research goals,</li>
+<li>data sources,</li>
+<li>expected outputs,</li>
+<li>coding standards,</li>
+<li>validation checks,</li>
+<li>rules for using AI assistance.</li>
+</ul>
+<p>This file helps collaborators and AI assistants understand the project before editing code.</p>
+</section>
+<section id="develop-data-and-code-reproducibly" class="level4">
+<h4 class="anchored" data-anchor-id="develop-data-and-code-reproducibly">4. Develop Data And Code Reproducibly</h4>
+<p>Use relative paths and a clear folder structure. A typical structure is:</p>
+<pre class="text"><code>project-name/
+├── data/
+│   ├── raw/              # Original, immutable data; do not edit directly
+│   ├── interim/          # Intermediate data generated during processing
+│   ├── processed/        # Cleaned or transformed datasets
+├── code/
+│   ├── notebooks/        # Exploratory analysis and prototyping
+│   ├── scripts/          # Reusable scripts for data processing and analysis
+│   ├── src/              # Core reusable project code
+│   └── tests/            # Unit tests and validation checks
+├── output/
+│   ├── figures/          # Generated plots, charts, and images
+│   ├── tables/           # Generated tables and result summaries
+│   ├── models/           # Trained models or serialized outputs│
+├── reports/
+│   ├── drafts/           # Working versions of reports or papers
+│   ├── final/            # Finalized reports
+│   └── presentations/    # Slides and presentation materials
+├── docs/
+│   ├── plan.md           # Project goals, milestones, timeline, and tasks
+│   ├── context.md        # Background, motivation, assumptions, and scope
+│   └── references.md     # Key references and supporting materials
+├── README.md             # Project overview, setup, and usage instructions
+├── .gitignore            # Exclude confidential data, credentials, and large raw files
+└── LICENSE               # Licensing terms</code></pre>
+<p>Keep raw data separate from cleaned data. Record cleaning decisions. Use scripts or Quarto documents that can be rerun from start to finish.</p>
+</section>
+<section id="analyze-with-validation-checks" class="level4">
+<h4 class="anchored" data-anchor-id="analyze-with-validation-checks">5. Analyze With Validation Checks</h4>
+<p>Analysis should be incremental. Run the code after each major change and check:</p>
+<ul>
+<li>data dimensions and variable names,</li>
+<li>missing values and outliers,</li>
+<li>joins and merges,</li>
+<li>descriptive statistics,</li>
+<li>sensitivity to alternative specifications.</li>
+</ul>
+</section>
+<section id="report-with-quarto" class="level4">
+<h4 class="anchored" data-anchor-id="report-with-quarto">6. Report With Quarto</h4>
+<p>Use Quarto to combine explanation, code, tables, figures, and results in a single reproducible document. Quarto reports can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports.</p>
+<p>Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility.</p>
+<p>When needed, research writing can be done in Word for easier editing and commenting. In that case, tables and figures should be generated separately as PDF files and attached or inserted into the main Word document.</p>
+</section>
+<section id="use-ai-assistants-carefully" class="level4">
+<h4 class="anchored" data-anchor-id="use-ai-assistants-carefully">7. Use AI Assistants Carefully</h4>
+<p>AI assistants are useful for planning, code drafting, debugging, documentation, and review. The recommended pattern is:</p>
+<pre class="text"><code>Provide context -&gt; Ask for a plan -&gt; Review the plan -&gt; Allow limited edits -&gt; Run -&gt; checks -&gt; Review output -&gt; Commit</code></pre>
+<p>Good rules for AI-assisted research:</p>
+<ul>
+<li>Ask for a plan before file edits.</li>
+<li>Keep the requested task narrow.</li>
+<li>Review all code and text before accepting it.</li>
+<li>Rerun the analysis after edits.</li>
+<li>Do not let the assistant invent results.</li>
+<li>Commit only after human review.</li>
+</ul>
+</section>
+</section>
+<section id="working-standard" class="level3">
+<h3 class="anchored" data-anchor-id="working-standard">Working Standard</h3>
+<p>A project is in good shape when a collaborator or reviewer can open the repository, understand the question, run the analysis, inspect the outputs, and see why each major research decision was made.</p>
 
 
 </section>
