@@ -2,7 +2,7 @@
 title: "Research Workflow"
 ---
 
-The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.
+The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects (see [Why do we need a new research workflow?](why-new-research-workflow.qmd)). The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.
 
 ### Core Principles
 
