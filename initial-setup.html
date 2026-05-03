@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research Workflow – State and Local Government Finance Research Lab</title>
+<title>Initial Set Up – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research-workflow.html" aria-current="page"> 
+    <a class="nav-link" href="./research-workflow.html"> 
 <span class="menu-text">Research Workflow</span></a>
   </li>  
 </ul>
@@ -116,10 +116,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-principles" id="toc-core-principles" class="nav-link active" data-scroll-target="#core-principles">Core Principles</a></li>
-  <li><a href="#recommended-toolchain" id="toc-recommended-toolchain" class="nav-link" data-scroll-target="#recommended-toolchain">Recommended Toolchain</a></li>
-  <li><a href="#workflow-posts" id="toc-workflow-posts" class="nav-link" data-scroll-target="#workflow-posts">Workflow Posts</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#everyday-git-workflow" id="toc-everyday-git-workflow" class="nav-link active" data-scroll-target="#everyday-git-workflow">Everyday Git Workflow</a></li>
+  <li><a href="#project-context" id="toc-project-context" class="nav-link" data-scroll-target="#project-context">Project Context</a></li>
   </ul>
 </nav>
     </div>
@@ -128,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Workflow</h1>
+<h1 class="title">Initial Set Up</h1>
 </div>
 
 
@@ -145,44 +143,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.</p>
-<section id="core-principles" class="level3">
-<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
-<p>Good research workflow should make each project:</p>
+<p>Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.</p>
+<p>Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized.</p>
+<section id="everyday-git-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="everyday-git-workflow">Everyday Git Workflow</h3>
+<p>The everyday Git workflow is simple:</p>
+<pre class="text"><code>Edit -&gt; Save -&gt; Stage -&gt; Commit -&gt; Push</code></pre>
+<p>Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in <code>.gitignore</code> to prevent them from being tracked.</p>
+</section>
+<section id="project-context" class="level3">
+<h3 class="anchored" data-anchor-id="project-context">Project Context</h3>
+<p>Before analysis begins, create a short project context file, such as <code>project_context.md</code>. It should state:</p>
 <ul>
-<li><strong>Reproducible:</strong> another researcher can rerun the analysis from the project files.</li>
-<li><strong>Traceable:</strong> important changes are recorded in version control.</li>
-<li><strong>Readable:</strong> data notes, code, outputs, and interpretation are organized in one project.</li>
-<li><strong>Recoverable:</strong> mistakes can be corrected without losing prior work.</li>
-<li><strong>Collaborative:</strong> work can be shared, reviewed, and improved through GitHub.</li>
-<li><strong>Human-led:</strong> AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.</li>
+<li>the research goals,</li>
+<li>data sources,</li>
+<li>expected outputs,</li>
+<li>coding standards,</li>
+<li>validation checks,</li>
+<li>rules for using AI assistance.</li>
 </ul>
-</section>
-<section id="recommended-toolchain" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-toolchain">Recommended Toolchain</h3>
-<p>The lab’s default workflow combines:</p>
-<ul>
-<li><strong>Positron</strong> or <strong>VS Code:</strong> an integrated development environment for R, Python, Quarto, and Git.</li>
-<li><strong>R or Python:</strong> statistical programming languages for data cleaning, analysis, modeling, and visualization.</li>
-<li><strong>Quarto:</strong> reproducible reporting for combining text, code, tables, figures, and results.</li>
-<li><strong>Git and GitHub:</strong> version control, backup, collaboration, and publication workflows.</li>
-<li><strong>AI coding assistants:</strong> Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.</li>
-</ul>
-</section>
-<section id="workflow-posts" class="level3">
-<h3 class="anchored" data-anchor-id="workflow-posts">Workflow Posts</h3>
-<p>Use these short posts to learn the details of the workflow:</p>
-<ol type="1">
-<li><a href="./why-new-research-workflow.html">Intro: Why do we need a new research workflow?</a></li>
-<li><a href="./install-tools.html">Research Workflow Tools: Install and Resources</a></li>
-<li><a href="./initial-setup.html">Initial Set Up</a></li>
-<li><a href="./ai-assisted-coding.html">AI-Assisted Coding</a></li>
-<li><a href="./example-workflow.html">Example Workflow</a></li>
-<li><a href="./report-with-quarto.html">Report With Quarto</a></li>
-</ol>
-</section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<p>This file helps collaborators and AI assistants understand the project before editing code.</p>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research Workflow – State and Local Government Finance Research Lab</title>
+<title>Report With Quarto – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research-workflow.html" aria-current="page"> 
+    <a class="nav-link" href="./research-workflow.html"> 
 <span class="menu-text">Research Workflow</span></a>
   </li>  
 </ul>
@@ -116,10 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-principles" id="toc-core-principles" class="nav-link active" data-scroll-target="#core-principles">Core Principles</a></li>
-  <li><a href="#recommended-toolchain" id="toc-recommended-toolchain" class="nav-link" data-scroll-target="#recommended-toolchain">Recommended Toolchain</a></li>
-  <li><a href="#workflow-posts" id="toc-workflow-posts" class="nav-link" data-scroll-target="#workflow-posts">Workflow Posts</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#practical-standard" id="toc-practical-standard" class="nav-link active" data-scroll-target="#practical-standard">Practical Standard</a></li>
   </ul>
 </nav>
     </div>
@@ -128,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Workflow</h1>
+<h1 class="title">Report With Quarto</h1>
 </div>
 
 
@@ -145,44 +142,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.</p>
-<section id="core-principles" class="level3">
-<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
-<p>Good research workflow should make each project:</p>
-<ul>
-<li><strong>Reproducible:</strong> another researcher can rerun the analysis from the project files.</li>
-<li><strong>Traceable:</strong> important changes are recorded in version control.</li>
-<li><strong>Readable:</strong> data notes, code, outputs, and interpretation are organized in one project.</li>
-<li><strong>Recoverable:</strong> mistakes can be corrected without losing prior work.</li>
-<li><strong>Collaborative:</strong> work can be shared, reviewed, and improved through GitHub.</li>
-<li><strong>Human-led:</strong> AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.</li>
-</ul>
-</section>
-<section id="recommended-toolchain" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-toolchain">Recommended Toolchain</h3>
-<p>The lab’s default workflow combines:</p>
-<ul>
-<li><strong>Positron</strong> or <strong>VS Code:</strong> an integrated development environment for R, Python, Quarto, and Git.</li>
-<li><strong>R or Python:</strong> statistical programming languages for data cleaning, analysis, modeling, and visualization.</li>
-<li><strong>Quarto:</strong> reproducible reporting for combining text, code, tables, figures, and results.</li>
-<li><strong>Git and GitHub:</strong> version control, backup, collaboration, and publication workflows.</li>
-<li><strong>AI coding assistants:</strong> Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.</li>
-</ul>
-</section>
-<section id="workflow-posts" class="level3">
-<h3 class="anchored" data-anchor-id="workflow-posts">Workflow Posts</h3>
-<p>Use these short posts to learn the details of the workflow:</p>
-<ol type="1">
-<li><a href="./why-new-research-workflow.html">Intro: Why do we need a new research workflow?</a></li>
-<li><a href="./install-tools.html">Research Workflow Tools: Install and Resources</a></li>
-<li><a href="./initial-setup.html">Initial Set Up</a></li>
-<li><a href="./ai-assisted-coding.html">AI-Assisted Coding</a></li>
-<li><a href="./example-workflow.html">Example Workflow</a></li>
-<li><a href="./report-with-quarto.html">Report With Quarto</a></li>
-</ol>
-</section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<p>Use Quarto to combine explanation, code, tables, figures, and results in a single reproducible document. Quarto reports can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports.</p>
+<p>Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility.</p>
+<p>When needed, research writing can be done in Word for easier editing and commenting. In that case, tables and figures should be generated separately as PDF files and attached or inserted into the main Word document.</p>
+<section id="practical-standard" class="level3">
+<h3 class="anchored" data-anchor-id="practical-standard">Practical Standard</h3>
+<p>The preferred workflow is:</p>
+<pre class="text"><code>Data + code -&gt; Quarto report -&gt; Rendered tables, figures, paper, or slides</code></pre>
+<p>When the data or model changes, rerender the Quarto document so the report reflects the current analysis.</p>
 
 
 </section>

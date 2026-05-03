@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gang Chen">
+<meta name="dcterms.date" content="2026-05-02">
 
-<title>Research Workflow – State and Local Government Finance Research Lab</title>
+<title>Research Workflow Tools: Install and Resources – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research-workflow.html" aria-current="page"> 
+    <a class="nav-link" href="./research-workflow.html"> 
 <span class="menu-text">Research Workflow</span></a>
   </li>  
 </ul>
@@ -116,10 +118,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-principles" id="toc-core-principles" class="nav-link active" data-scroll-target="#core-principles">Core Principles</a></li>
-  <li><a href="#recommended-toolchain" id="toc-recommended-toolchain" class="nav-link" data-scroll-target="#recommended-toolchain">Recommended Toolchain</a></li>
-  <li><a href="#workflow-posts" id="toc-workflow-posts" class="nav-link" data-scroll-target="#workflow-posts">Workflow Posts</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#positron-or-vs-code" id="toc-positron-or-vs-code" class="nav-link active" data-scroll-target="#positron-or-vs-code">Positron Or VS Code</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#ai-assistants" id="toc-ai-assistants" class="nav-link" data-scroll-target="#ai-assistants">AI Assistants</a></li>
+  <li><a href="#how-to-install-codex-in-positron" id="toc-how-to-install-codex-in-positron" class="nav-link" data-scroll-target="#how-to-install-codex-in-positron">How to Install Codex in Positron</a></li>
+  <li><a href="#how-to-install-github-copilot-in-positron" id="toc-how-to-install-github-copilot-in-positron" class="nav-link" data-scroll-target="#how-to-install-github-copilot-in-positron">How to install GitHub Copilot in Positron:</a></li>
   </ul>
 </nav>
     </div>
@@ -128,14 +135,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Workflow</h1>
+<h1 class="title">Research Workflow Tools: Install and Resources</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gang Chen </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 2, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -145,44 +164,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.</p>
-<section id="core-principles" class="level3">
-<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
-<p>Good research workflow should make each project:</p>
-<ul>
-<li><strong>Reproducible:</strong> another researcher can rerun the analysis from the project files.</li>
-<li><strong>Traceable:</strong> important changes are recorded in version control.</li>
-<li><strong>Readable:</strong> data notes, code, outputs, and interpretation are organized in one project.</li>
-<li><strong>Recoverable:</strong> mistakes can be corrected without losing prior work.</li>
-<li><strong>Collaborative:</strong> work can be shared, reviewed, and improved through GitHub.</li>
-<li><strong>Human-led:</strong> AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.</li>
-</ul>
+<p>The lab workflow depends on a small set of tools that work together in one project workspace.</p>
+<section id="positron-or-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="positron-or-vs-code">Positron Or VS Code</h3>
+<p>Install Positron:</p>
+<p><a href="https://positron.posit.co/download.html" class="uri">https://positron.posit.co/download.html</a></p>
+<p>Positron is an IDE (integrated development environment) that combines R, Python, Quarto, and Git in one interface. It is the lab’s recommended tool for research projects. Other options include VS Code and RStudio, which can also be used with the tools introduced below.</p>
 </section>
-<section id="recommended-toolchain" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-toolchain">Recommended Toolchain</h3>
-<p>The lab’s default workflow combines:</p>
-<ul>
-<li><strong>Positron</strong> or <strong>VS Code:</strong> an integrated development environment for R, Python, Quarto, and Git.</li>
-<li><strong>R or Python:</strong> statistical programming languages for data cleaning, analysis, modeling, and visualization.</li>
-<li><strong>Quarto:</strong> reproducible reporting for combining text, code, tables, figures, and results.</li>
-<li><strong>Git and GitHub:</strong> version control, backup, collaboration, and publication workflows.</li>
-<li><strong>AI coding assistants:</strong> Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.</li>
-</ul>
+<section id="r" class="level3">
+<h3 class="anchored" data-anchor-id="r">R</h3>
+<p>Install R:</p>
+<p><a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a></p>
+<p>R is useful for data cleaning, statistical analysis, and visualization, especially with packages such as <code>tidyverse</code> and <code>ggplot2</code>. If you are new to R, start with the <a href="https://r4ds.had.co.nz/">R for Data Science</a> book to learn the basics of R programming and data analysis.</p>
+<p>Note that if you are already using Stata, you don’t need to learn R entirely from scratch. You can use R for specific tasks such as data wrangling, visualization, and regression models. Best learning materials for Stata users include the <a href="https://www.matthieugomez.com/statar/">R for Stata Users</a> website and the <a href="https://r4stats.com/books/r4stata/">R for Stata Users</a> book. You can also use R and Stata together in the same project workspace, using R for data manipulation and visualization, and Stata for regression models if you prefer.</p>
 </section>
-<section id="workflow-posts" class="level3">
-<h3 class="anchored" data-anchor-id="workflow-posts">Workflow Posts</h3>
-<p>Use these short posts to learn the details of the workflow:</p>
+<section id="python" class="level3">
+<h3 class="anchored" data-anchor-id="python">Python</h3>
+<p>Install Python if needed for specific tasks such as machine learning or natural language processing:</p>
+<p><a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></p>
+<p>Python is a general-purpose programming language that is widely used in data science, web development, and application development. It has powerful libraries for data manipulation (Pandas), machine learning (scikit-learn), and natural language processing (NLTK, spaCy). If you are new to Python, start with the <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python for Data Science Handbook</a> to learn how to use Python for data analysis and machine learning.</p>
+<p>If you are already using R, you can use Python for specific tasks that are better suited for Python, such as machine learning or natural language processing. You can also use R and Python together in the same project workspace, using R for data manipulation and visualization, and Python for machine learning or NLP tasks if you prefer. Start with Rebecca Barter’s <a href="https://rebeccabarter.com/blog/2023-09-11-from_r_to_python">An introduction to Python for R Users</a> tutorial to learn how to use Python as an R user.</p>
+</section>
+<section id="git" class="level3">
+<h3 class="anchored" data-anchor-id="git">Git</h3>
+<p>Install Git:</p>
+<p><a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a></p>
+<p>Git records changes to the project over time and makes it possible to recover earlier versions.</p>
+</section>
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">GitHub</h3>
+<p>Create a GitHub account (free for public repositories):</p>
+<p><a href="https://github.com/" class="uri">https://github.com/</a></p>
+<p>GitHub provides remote backup, collaboration, issue tracking, and review workflows. You can also use GitHub Copilot for AI-assisted coding, which help you to write code faster and with fewer errors. It can be used in Positron, VS Code, and RStudio. However, it is not necessary to use GitHub Copilot if you have access to Codex or Claude Code.</p>
+</section>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+<p>Use Quarto through Positron when possible. Quarto can also be installed separately:</p>
+<p><a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a></p>
+<p>Or you can install Quarto inside Position, RStudio, or VS Code. Quarto is useful for combining code, tables, figures, and text in a single reproducible document. It can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports. Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility. When needed, research writing can be done in Word for easier editing and commenting. In that case, tables and figures should be generated separately as PDF files and attached or inserted into the main Word document.</p>
+</section>
+<section id="ai-assistants" class="level3">
+<h3 class="anchored" data-anchor-id="ai-assistants">AI Assistants</h3>
+<p>AI assistants can be added depending on access and preference:</p>
+<ul>
+<li>Codex: <a href="https://chatgpt.com/codex" class="uri">https://chatgpt.com/codex</a></li>
+<li>GitHub Copilot: <a href="https://github.com/features/copilot" class="uri">https://github.com/features/copilot</a></li>
+<li>Claude Code: <a href="https://www.anthropic.com/claude-code" class="uri">https://www.anthropic.com/claude-code</a></li>
+</ul>
+<p>I used both Codex and GitHub Copilot. My ChatGPT Plus subscription gives me access to Codex, which is more powerful and flexible than GitHub Copilot. I use Codex for all my AI-assisted coding work, and I use GitHub Copilot as a backup when I am still doing my coding work. I have not used Claude Code yet, but I am interested in trying it out as well.</p>
+<p>Codex comes with the ChatGPT Plus subscription, which costs $20 per month. GitHub Copilot is a separate subscription that costs $10 per month. If you have access to Codex through ChatGPT Plus, you may not need GitHub Copilot, but it can be a useful backup option.</p>
+</section>
+<section id="how-to-install-codex-in-positron" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-install-codex-in-positron">How to Install Codex in Positron</h3>
 <ol type="1">
-<li><a href="./why-new-research-workflow.html">Intro: Why do we need a new research workflow?</a></li>
-<li><a href="./install-tools.html">Research Workflow Tools: Install and Resources</a></li>
-<li><a href="./initial-setup.html">Initial Set Up</a></li>
-<li><a href="./ai-assisted-coding.html">AI-Assisted Coding</a></li>
-<li><a href="./example-workflow.html">Example Workflow</a></li>
-<li><a href="./report-with-quarto.html">Report With Quarto</a></li>
+<li>Open Positron and go to the Extensions tab.</li>
+<li>Search for “ChatGPT” and install the “ChatGPT Extension” by OpenAI.</li>
+<li>After installation, you will see a new ChatGPT icon in the sidebar. Note that Positron has a primary sidebar and a secondary sidebar. The ChatGPT extension will be added to the secondary sidebar. You can move it to the primary sidebar if you want.</li>
+<li>Click on the ChatGPT icon and sign in with your OpenAI account that has access to Codex through ChatGPT Plus.</li>
+<li>Once signed in, you can start using the ChatGPT extension to get AI-assisted coding help directly within Positron.</li>
 </ol>
+<p>Note that Positron also has its own AI assistant called “Positron AI,” which can be powered through ChatGPT, but you will need to connect it through your GPT API key, which costs extra money. You do not need to use Positron AI if you have access to Codex through the ChatGPT extension.</p>
+<p>Another option for installing Codex is to install it in the terminal and use it through the command line. You can follow the instructions in the OpenAI documentation to install the OpenAI CLI and set up Codex for command-line use: https://platform.openai.com/docs/cli . This can be useful if you prefer to use Codex outside of an IDE or if you want to use it in a different environment. You can also use multiple terminals for parallel use of Codex AI agents on multiple tasks.</p>
+<p>My video tutorial on how to install and use Codex in Positron is available here: place holder</p>
 </section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<section id="how-to-install-github-copilot-in-positron" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-install-github-copilot-in-positron">How to install GitHub Copilot in Positron:</h3>
+<ol type="1">
+<li>Open Positron and go to the Extensions tab.</li>
+<li>Search for “GitHub Copilot” and install the “GitHub Copilot” extension by GitHub.</li>
+<li>After installation, you will see a new GitHub Copilot icon in the sidebar.</li>
+<li>Click on the GitHub Copilot icon and sign in with your GitHub account that has a Copilot subscription.</li>
+<li>Once signed in, you can start using GitHub Copilot to get AI-assisted coding help directly within Positron.</li>
+</ol>
 
 
 </section>

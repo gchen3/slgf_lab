@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Gang Chen">
+<meta name="dcterms.date" content="2026-05-02">
 
-<title>Research Workflow – State and Local Government Finance Research Lab</title>
+<title>AI-Assisted Coding – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research-workflow.html" aria-current="page"> 
+    <a class="nav-link" href="./research-workflow.html"> 
 <span class="menu-text">Research Workflow</span></a>
   </li>  
 </ul>
@@ -116,10 +118,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-principles" id="toc-core-principles" class="nav-link active" data-scroll-target="#core-principles">Core Principles</a></li>
-  <li><a href="#recommended-toolchain" id="toc-recommended-toolchain" class="nav-link" data-scroll-target="#recommended-toolchain">Recommended Toolchain</a></li>
-  <li><a href="#workflow-posts" id="toc-workflow-posts" class="nav-link" data-scroll-target="#workflow-posts">Workflow Posts</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#recommended-pattern" id="toc-recommended-pattern" class="nav-link active" data-scroll-target="#recommended-pattern">Recommended Pattern</a></li>
+  <li><a href="#good-rules" id="toc-good-rules" class="nav-link" data-scroll-target="#good-rules">Good Rules</a></li>
+  <li><a href="#what-is-a-context-file" id="toc-what-is-a-context-file" class="nav-link" data-scroll-target="#what-is-a-context-file">What is a context file?</a></li>
+  <li><a href="#what-is-a-plan-document" id="toc-what-is-a-plan-document" class="nav-link" data-scroll-target="#what-is-a-plan-document">What is a plan document?</a></li>
+  <li><a href="#prompts" id="toc-prompts" class="nav-link" data-scroll-target="#prompts">Prompts</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best practices?</a></li>
   </ul>
 </nav>
     </div>
@@ -128,14 +132,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Workflow</h1>
+<h1 class="title">AI-Assisted Coding</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gang Chen </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 2, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -145,44 +161,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.</p>
-<section id="core-principles" class="level3">
-<h3 class="anchored" data-anchor-id="core-principles">Core Principles</h3>
-<p>Good research workflow should make each project:</p>
+<p>AI assistants are useful for planning, code drafting, debugging, documentation, and review. They are most useful when the project has clear context, organized files, and version control.</p>
+<section id="recommended-pattern" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-pattern">Recommended Pattern</h3>
+<p>Use this pattern when asking an AI assistant to help with research code:</p>
+<pre class="text"><code>Provide context -&gt; Ask for a plan -&gt; Review the plan -&gt; Implement the plan -&gt; Run checks -&gt; Review output -&gt; Commit</code></pre>
+</section>
+<section id="good-rules" class="level3">
+<h3 class="anchored" data-anchor-id="good-rules">Good Rules</h3>
 <ul>
-<li><strong>Reproducible:</strong> another researcher can rerun the analysis from the project files.</li>
-<li><strong>Traceable:</strong> important changes are recorded in version control.</li>
-<li><strong>Readable:</strong> data notes, code, outputs, and interpretation are organized in one project.</li>
-<li><strong>Recoverable:</strong> mistakes can be corrected without losing prior work.</li>
-<li><strong>Collaborative:</strong> work can be shared, reviewed, and improved through GitHub.</li>
-<li><strong>Human-led:</strong> AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.</li>
+<li>Ask for a plan before file edits.</li>
+<li>Keep the requested task concrete.</li>
+<li>Review all code and text before accepting it.</li>
+<li>Rerun the analysis after edits.</li>
+<li>Do not let the assistant invent results.</li>
+<li>Commit only after human review.</li>
 </ul>
 </section>
-<section id="recommended-toolchain" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-toolchain">Recommended Toolchain</h3>
-<p>The lab’s default workflow combines:</p>
-<ul>
-<li><strong>Positron</strong> or <strong>VS Code:</strong> an integrated development environment for R, Python, Quarto, and Git.</li>
-<li><strong>R or Python:</strong> statistical programming languages for data cleaning, analysis, modeling, and visualization.</li>
-<li><strong>Quarto:</strong> reproducible reporting for combining text, code, tables, figures, and results.</li>
-<li><strong>Git and GitHub:</strong> version control, backup, collaboration, and publication workflows.</li>
-<li><strong>AI coding assistants:</strong> Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.</li>
-</ul>
+<section id="what-is-a-context-file" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-context-file">What is a context file?</h3>
 </section>
-<section id="workflow-posts" class="level3">
-<h3 class="anchored" data-anchor-id="workflow-posts">Workflow Posts</h3>
-<p>Use these short posts to learn the details of the workflow:</p>
-<ol type="1">
-<li><a href="./why-new-research-workflow.html">Intro: Why do we need a new research workflow?</a></li>
-<li><a href="./install-tools.html">Research Workflow Tools: Install and Resources</a></li>
-<li><a href="./initial-setup.html">Initial Set Up</a></li>
-<li><a href="./ai-assisted-coding.html">AI-Assisted Coding</a></li>
-<li><a href="./example-workflow.html">Example Workflow</a></li>
-<li><a href="./report-with-quarto.html">Report With Quarto</a></li>
-</ol>
+<section id="what-is-a-plan-document" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-a-plan-document">What is a plan document?</h3>
 </section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<section id="prompts" class="level3">
+<h3 class="anchored" data-anchor-id="prompts">Prompts</h3>
+</section>
+<section id="best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices">Best practices?</h3>
 
 
 </section>
