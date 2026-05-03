@@ -1,0 +1,30 @@
+---
+title: "Initial Set Up"
+---
+
+Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.
+
+Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized.
+
+### Everyday Git Workflow
+
+The everyday Git workflow is simple:
+
+``` text
+Edit -> Save -> Stage -> Commit -> Push
+```
+
+Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in `.gitignore` to prevent them from being tracked.
+
+### Project Context
+
+Before analysis begins, create a short project context file, such as `project_context.md`. It should state:
+
+-   the research goals,
+-   data sources,
+-   expected outputs,
+-   coding standards,
+-   validation checks,
+-   rules for using AI assistance.
+
+This file helps collaborators and AI assistants understand the project before editing code.

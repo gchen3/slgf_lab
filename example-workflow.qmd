@@ -1,0 +1,49 @@
+---
+title: "Example Workflow"
+author: Gang Chen
+date: 5/2/2026
+---
+
+Use relative paths and a clear folder structure. A typical research project can use this structure:
+
+``` text
+project-name/
+|-- data/
+|   |-- raw/              # Original, immutable data; do not edit directly
+|   |-- interim/          # Intermediate data generated during processing
+|   `-- processed/        # Cleaned or transformed datasets
+|-- code/
+|   |-- notebooks/        # Exploratory analysis and prototyping
+|   |-- scripts/          # Reusable scripts for data processing and analysis
+|   |-- src/              # Core reusable project code
+|   `-- tests/            # Unit tests and validation checks
+|-- output/
+|   |-- figures/          # Generated plots, charts, and images
+|   |-- tables/           # Generated tables and result summaries
+|   `-- models/           # Trained models or serialized outputs
+|-- reports/
+|   |-- drafts/           # Working versions of reports or papers
+|   |-- final/            # Finalized reports
+|   `-- presentations/    # Slides and presentation materials
+|-- docs/
+|   |-- plan.md           # Project goals, milestones, timeline, and tasks
+|   |-- context.md        # Background, motivation, assumptions, and scope
+|   `-- references.md     # Key references and supporting materials
+|-- README.md             # Project overview, setup, and usage instructions
+|-- .gitignore            # Exclude confidential data, credentials, and large raw files
+`-- LICENSE               # Licensing terms
+```
+
+Keep raw data separate from cleaned data. Record cleaning decisions. Use scripts or Quarto documents that can be rerun from start to finish.
+
+### Development Cycle
+
+Analysis should be incremental. Run the code after each major change and check:
+
+-   data dimensions and variable names,
+-   missing values and outliers,
+-   joins and merges,
+-   descriptive statistics,
+-   sensitivity to alternative specifications.
+
+Commit the project after a meaningful unit of work is complete and the output has been reviewed.

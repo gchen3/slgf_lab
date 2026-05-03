@@ -1,0 +1,32 @@
+---
+title: "AI-Assisted Coding"
+author: Gang Chen
+date: 5/2/2026
+---
+
+AI assistants are useful for planning, code drafting, debugging, documentation, and review. They are most useful when the project has clear context, organized files, and version control.
+
+### Recommended Pattern
+
+Use this pattern when asking an AI assistant to help with research code:
+
+``` text
+Provide context -> Ask for a plan -> Review the plan -> Implement the plan -> Run checks -> Review output -> Commit
+```
+
+### Good Rules
+
+-   Ask for a plan before file edits.
+-   Keep the requested task concrete.
+-   Review all code and text before accepting it.
+-   Rerun the analysis after edits.
+-   Do not let the assistant invent results.
+-   Commit only after human review.
+
+### What is a context file?
+
+### What is a plan document?
+
+### Prompts
+
+### Best practices?

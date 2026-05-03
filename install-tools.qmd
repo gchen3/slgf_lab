@@ -1,0 +1,93 @@
+---
+title: "Research Workflow Tools: Install and Resources"
+author: Gang Chen
+date: 5/2/2026
+---
+
+The lab workflow depends on a small set of tools that work together in one project workspace.
+
+### Positron Or VS Code
+
+Install Positron:
+
+<https://positron.posit.co/download.html>
+
+Positron is an IDE (integrated development environment) that combines R, Python, Quarto, and Git in one interface. It is the lab's recommended tool for research projects. Other options include VS Code and RStudio, which can also be used with the tools introduced below.
+
+### R
+
+Install R:
+
+<https://cloud.r-project.org/>
+
+R is useful for data cleaning, statistical analysis, and visualization, especially with packages such as `tidyverse` and `ggplot2`. If you are new to R, start with the [R for Data Science](https://r4ds.had.co.nz/) book to learn the basics of R programming and data analysis.
+
+Note that if you are already using Stata, you don't need to learn R entirely from scratch. You can use R for specific tasks such as data wrangling, visualization, and regression models. Best learning materials for Stata users include the [R for Stata Users](https://www.matthieugomez.com/statar/) website and the [R for Stata Users](https://r4stats.com/books/r4stata/) book. You can also use R and Stata together in the same project workspace, using R for data manipulation and visualization, and Stata for regression models if you prefer.
+
+### Python
+
+Install Python if needed for specific tasks such as machine learning or natural language processing:
+
+<https://www.python.org/downloads/>
+
+Python is a general-purpose programming language that is widely used in data science, web development, and application development. It has powerful libraries for data manipulation (Pandas), machine learning (scikit-learn), and natural language processing (NLTK, spaCy). If you are new to Python, start with the [Python for Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) to learn how to use Python for data analysis and machine learning.
+
+If you are already using R, you can use Python for specific tasks that are better suited for Python, such as machine learning or natural language processing. You can also use R and Python together in the same project workspace, using R for data manipulation and visualization, and Python for machine learning or NLP tasks if you prefer. Start with Rebecca Barter's [An introduction to Python for R Users](https://rebeccabarter.com/blog/2023-09-11-from_r_to_python) tutorial to learn how to use Python as an R user.
+
+### Git
+
+Install Git:
+
+<https://git-scm.com/downloads>
+
+Git records changes to the project over time and makes it possible to recover earlier versions.
+
+### GitHub
+
+Create a GitHub account (free for public repositories):
+
+<https://github.com/>
+
+GitHub provides remote backup, collaboration, issue tracking, and review workflows. You can also use GitHub Copilot for AI-assisted coding, which help you to write code faster and with fewer errors. It can be used in Positron, VS Code, and RStudio. However, it is not necessary to use GitHub Copilot if you have access to Codex or Claude Code.
+
+### Quarto
+
+Use Quarto through Positron when possible. Quarto can also be installed separately:
+
+<https://quarto.org/docs/get-started/>
+
+Or you can install Quarto inside Position, RStudio, or VS Code. Quarto is useful for combining code, tables, figures, and text in a single reproducible document. It can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports. Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility. When needed, research writing can be done in Word for easier editing and commenting. In that case, tables and figures should be generated separately as PDF files and attached or inserted into the main Word document.
+
+### AI Assistants
+
+AI assistants can be added depending on access and preference:
+
+-   Codex: <https://chatgpt.com/codex>
+-   GitHub Copilot: <https://github.com/features/copilot>
+-   Claude Code: <https://www.anthropic.com/claude-code>
+
+I used both Codex and GitHub Copilot. My ChatGPT Plus subscription gives me access to Codex, which is more powerful and flexible than GitHub Copilot. I use Codex for all my AI-assisted coding work, and I use GitHub Copilot as a backup when I am still doing my coding work. I have not used Claude Code yet, but I am interested in trying it out as well.
+
+Codex comes with the ChatGPT Plus subscription, which costs \$20 per month. GitHub Copilot is a separate subscription that costs \$10 per month. If you have access to Codex through ChatGPT Plus, you may not need GitHub Copilot, but it can be a useful backup option.
+
+### How to Install Codex in Positron
+
+1.  Open Positron and go to the Extensions tab.
+2.  Search for “ChatGPT” and install the “ChatGPT Extension” by OpenAI.
+3.  After installation, you will see a new ChatGPT icon in the sidebar. Note that Positron has a primary sidebar and a secondary sidebar. The ChatGPT extension will be added to the secondary sidebar. You can move it to the primary sidebar if you want.
+4.  Click on the ChatGPT icon and sign in with your OpenAI account that has access to Codex through ChatGPT Plus.
+5.  Once signed in, you can start using the ChatGPT extension to get AI-assisted coding help directly within Positron.
+
+Note that Positron also has its own AI assistant called “Positron AI,” which can be powered through ChatGPT, but you will need to connect it through your GPT API key, which costs extra money. You do not need to use Positron AI if you have access to Codex through the ChatGPT extension.
+
+Another option for installing Codex is to install it in the terminal and use it through the command line. You can follow the instructions in the OpenAI documentation to install the OpenAI CLI and set up Codex for command-line use: https://platform.openai.com/docs/cli . This can be useful if you prefer to use Codex outside of an IDE or if you want to use it in a different environment. You can also use multiple terminals for parallel use of Codex AI agents on multiple tasks.
+
+My video tutorial on how to install and use Codex in Positron is available here: place holder
+
+### How to install GitHub Copilot in Positron:
+
+1.  Open Positron and go to the Extensions tab.
+2.  Search for "GitHub Copilot" and install the "GitHub Copilot" extension by GitHub.
+3.  After installation, you will see a new GitHub Copilot icon in the sidebar.
+4.  Click on the GitHub Copilot icon and sign in with your GitHub account that has a Copilot subscription.
+5.  Once signed in, you can start using GitHub Copilot to get AI-assisted coding help directly within Positron.

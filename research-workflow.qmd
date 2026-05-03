@@ -2,7 +2,7 @@
 title: "Research Workflow"
 ---
 
-The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects (see [Why do we need a new research workflow?](why-new-research-workflow.qmd)). The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.
+The State and Local Government Finance Research Lab uses a reproducible, transparent, and reviewable workflow for research projects. The goal is to make the path from data to evidence clear enough that the work can be checked, revised, and extended.
 
 ### Core Principles
 
@@ -19,140 +19,21 @@ Good research workflow should make each project:
 
 The lab's default workflow combines:
 
--   **Positron** (Or VS Code)**:** an integrated development environment for R, Python, Quarto, and Git.
+-   **Positron** or **VS Code:** an integrated development environment for R, Python, Quarto, and Git.
 -   **R or Python:** statistical programming languages for data cleaning, analysis, modeling, and visualization.
 -   **Quarto:** reproducible reporting for combining text, code, tables, figures, and results.
 -   **Git and GitHub:** version control, backup, collaboration, and publication workflows.
 -   **AI coding assistants:** Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.
 
-### Install The Tools
+### Workflow Posts
 
-Install Positron (Or VS Code)
+Use these short posts to learn the details of the workflow:
 
-<https://positron.posit.co/download.html>
+1.  [Intro: Why do we need a new research workflow?](why-new-research-workflow.qmd)
+2.  [Research Workflow Tools: Install and Resources](install-tools.qmd)
+3.  [Initial Set Up](initial-setup.qmd)
+4.  [AI-Assisted Coding](ai-assisted-coding.qmd)
+5.  [Example Workflow](example-workflow.qmd)
+6.  [Report With Quarto](report-with-quarto.qmd)
 
-Install R:
-
-<https://cloud.r-project.org/>
-
-Install Python if a project uses Python:
-
-<https://www.python.org/downloads/>
-
-Install Git:
-
-<https://git-scm.com/downloads>
-
-Create a GitHub account:
-
-<https://github.com/>
-
-Use Quarto through Positron when possible. Quarto can also be installed separately:
-
-<https://quarto.org/docs/get-started/>
-
-AI assistants can be added depending on access and preference:
-
--   Codex: <https://chatgpt.com/codex>
--   GitHub Copilot: <https://github.com/features/copilot>
--   Claude Code: <https://www.anthropic.com/claude-code>
-
-### General Research Workflow
-
-#### 1. Create A Project Repository
-
-Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.
-
-Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized. The everyday Git workflow is simple:
-
-``` text
-Edit -> Save -> Stage -> Commit -> Push
-```
-
-Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in .gitignore to prevent them from being tracked.
-
-#### 3. Document Project Context
-
-Before analysis begins, create a short project context file, such as `project_context.md`. It should state:
-
--   the research goals,
--   data sources,
--   expected outputs,
--   coding standards,
--   validation checks,
--   rules for using AI assistance.
-
-This file helps collaborators and AI assistants understand the project before editing code.
-
-#### 4. Develop Data And Code Reproducibly
-
-Use relative paths and a clear folder structure. A typical structure is:
-
-``` text
-project-name/
-├── data/
-│   ├── raw/              # Original, immutable data; do not edit directly
-│   ├── interim/          # Intermediate data generated during processing
-│   ├── processed/        # Cleaned or transformed datasets
-├── code/
-│   ├── notebooks/        # Exploratory analysis and prototyping
-│   ├── scripts/          # Reusable scripts for data processing and analysis
-│   ├── src/              # Core reusable project code
-│   └── tests/            # Unit tests and validation checks
-├── output/
-│   ├── figures/          # Generated plots, charts, and images
-│   ├── tables/           # Generated tables and result summaries
-│   ├── models/           # Trained models or serialized outputs│
-├── reports/
-│   ├── drafts/           # Working versions of reports or papers
-│   ├── final/            # Finalized reports
-│   └── presentations/    # Slides and presentation materials
-├── docs/
-│   ├── plan.md           # Project goals, milestones, timeline, and tasks
-│   ├── context.md        # Background, motivation, assumptions, and scope
-│   └── references.md     # Key references and supporting materials
-├── README.md             # Project overview, setup, and usage instructions
-├── .gitignore            # Exclude confidential data, credentials, and large raw files
-└── LICENSE               # Licensing terms
-```
-
-Keep raw data separate from cleaned data. Record cleaning decisions. Use scripts or Quarto documents that can be rerun from start to finish.
-
-#### 5. Analyze With Validation Checks
-
-Analysis should be incremental. Run the code after each major change and check:
-
--   data dimensions and variable names,
--   missing values and outliers,
--   joins and merges,
--   descriptive statistics,
--   sensitivity to alternative specifications.
-
-#### 6. Report With Quarto
-
-Use Quarto to combine explanation, code, tables, figures, and results in a single reproducible document. Quarto reports can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports.
-
-Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility.
-
-When needed, research writing can be done in Word for easier editing and commenting. In that case, tables and figures should be generated separately as PDF files and attached or inserted into the main Word document.
-
-#### 7. Use AI Assistants Carefully
-
-AI assistants are useful for planning, code drafting, debugging, documentation, and review. The recommended pattern is:
-
-``` text
-Provide context -> Ask for a plan -> Review the plan -> Allow limited edits -> Run -> checks -> Review output -> Commit
-```
-
-Good rules for AI-assisted research:
-
--   Ask for a plan before file edits.
--   Keep the requested task narrow.
--   Review all code and text before accepting it.
--   Rerun the analysis after edits.
--   Do not let the assistant invent results.
--   Commit only after human review.
-
-### Working Standard
-
-A project is in good shape when a collaborator or reviewer can open the repository, understand the question, run the analysis, inspect the outputs, and see why each major research decision was made.
+###
