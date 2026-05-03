@@ -30,3 +30,7 @@ Provide context -> Ask for a plan -> Review the plan -> Implement the plan -> Ru
 ### Prompts
 
 ### Best practices?
+
+---
+
+[Back to Research Workflow](research-workflow.qmd) | [Last post: Initial Set Up](initial-setup.qmd) | [Next post: Example Workflow](example-workflow.qmd)

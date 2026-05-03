@@ -91,3 +91,7 @@ My video tutorial on how to install and use Codex in Positron is available here:
 3.  After installation, you will see a new GitHub Copilot icon in the sidebar.
 4.  Click on the GitHub Copilot icon and sign in with your GitHub account that has a Copilot subscription.
 5.  Once signed in, you can start using GitHub Copilot to get AI-assisted coding help directly within Positron.
+
+---
+
+[Back to Research Workflow](research-workflow.qmd) | [Last post: Why We Need A New Research Workflow](why-new-research-workflow.qmd) | [Next post: Initial Set Up](initial-setup.qmd)

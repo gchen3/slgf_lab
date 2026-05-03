@@ -28,3 +28,7 @@ Before analysis begins, create a short project context file, such as `project_co
 -   rules for using AI assistance.
 
 This file helps collaborators and AI assistants understand the project before editing code.
+
+---
+
+[Back to Research Workflow](research-workflow.qmd) | [Last post: Research Workflow Tools: Install and Resources](install-tools.qmd) | [Next post: AI-Assisted Coding](ai-assisted-coding.qmd)

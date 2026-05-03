@@ -17,3 +17,7 @@ Data + code -> Quarto report -> Rendered tables, figures, paper, or slides
 ```
 
 When the data or model changes, rerender the Quarto document so the report reflects the current analysis.
+
+---
+
+[Back to Research Workflow](research-workflow.qmd) | [Last post: Example Workflow](example-workflow.qmd)
