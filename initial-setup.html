@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Initial Set Up – State and Local Government Finance Research Lab</title>
+<title>Initial Setup and Project Folder Scaffold – State and Local Government Finance Research Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -116,7 +116,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#everyday-git-workflow" id="toc-everyday-git-workflow" class="nav-link active" data-scroll-target="#everyday-git-workflow">Everyday Git Workflow</a></li>
+  <li><a href="#github-workflow" id="toc-github-workflow" class="nav-link active" data-scroll-target="#github-workflow">GitHub Workflow</a></li>
+  <li><a href="#folder-structure" id="toc-folder-structure" class="nav-link" data-scroll-target="#folder-structure">Folder Structure</a></li>
   <li><a href="#project-context" id="toc-project-context" class="nav-link" data-scroll-target="#project-context">Project Context</a></li>
   </ul>
 </nav>
@@ -126,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Set Up</h1>
+<h1 class="title">Initial Setup and Project Folder Scaffold</h1>
 </div>
 
 
@@ -143,26 +144,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.</p>
-<p>Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized.</p>
-<section id="everyday-git-workflow" class="level3">
-<h3 class="anchored" data-anchor-id="everyday-git-workflow">Everyday Git Workflow</h3>
-<p>The everyday Git workflow is simple:</p>
+<p>Every research project should start in a dedicated project folder and, when possible, a matching GitHub repository. The goal is to keep data, code, documentation, reports, and outputs in one organized workspace that can be reviewed, backed up, and reproduced later.</p>
+<p>The repository should include source code, Quarto reports, project documentation, and non-sensitive derived outputs. Do not commit confidential data, credentials, or large raw files.</p>
+<section id="github-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="github-workflow">GitHub Workflow</h3>
+<p>If you are starting a new project, the simplest approach is to create the repository on GitHub first, then clone it to your computer. This keeps the local project folder and the remote GitHub repository connected from the beginning.</p>
+<p>If you already have project files on your computer, you can instead start from the local folder and connect it to a new GitHub repository later.</p>
+<p>The everyday Git workflow is:</p>
 <pre class="text"><code>Edit -&gt; Save -&gt; Stage -&gt; Commit -&gt; Push</code></pre>
-<p>Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in <code>.gitignore</code> to prevent them from being tracked.</p>
+<p>Use small, descriptive commits. A commit should represent one meaningful unit of work, such as cleaning one dataset, adding one figure, or revising one section of a report. Smaller commits make it easier to understand what changed and to recover from mistakes.</p>
+<p>Use <code>.gitignore</code> to keep files out of Git when they should not be tracked. This usually includes confidential data, raw data that cannot be shared, passwords, API keys, temporary files, and very large outputs.</p>
+<p>If you are new to GitHub, start with GitHub’s <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">Hello World guide</a>, then read the overview of <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub flow</a>. For a more hands-on guide, especially if you use R, read the Happy Git with R section on <a href="https://happygitwithr.com/usage-intro">getting started with GitHub</a>. Chapters 15-19 are useful for creating a first repository and connecting it to a local project folder.</p>
+<p>After working through those basics, return to this page and set up the folder structure for your own research project.</p>
+</section>
+<section id="folder-structure" class="level3">
+<h3 class="anchored" data-anchor-id="folder-structure">Folder Structure</h3>
+<p>A typical research project folder can use this structure:</p>
+<pre class="text"><code>project-name/
+|-- data/
+|   |-- raw/              # Original data; do not edit directly
+|   |-- interim/          # Intermediate files created during cleaning
+|   `-- processed/        # Cleaned or analysis-ready datasets
+|-- code/
+|   |-- notebooks/        # Exploratory analysis and prototyping
+|   |-- scripts/          # Reusable scripts for cleaning and analysis
+|   |-- src/              # Project functions or reusable code
+|   `-- tests/            # Validation checks
+|-- output/
+|   |-- figures/          # Generated plots and charts
+|   |-- tables/           # Generated tables and summaries
+|   `-- models/           # Model outputs, if needed
+|-- reports/
+|   |-- drafts/           # Working versions of papers or reports
+|   |-- final/            # Finalized reports
+|   `-- presentations/    # Slides and presentation files
+|-- docs/
+|   |-- plan.md           # Project goals, milestones, and tasks
+|   |-- context.md        # Background, assumptions, and scope
+|   `-- references.md     # Key references and notes
+|-- README.md             # Project overview and instructions
+|-- .gitignore            # Files Git should ignore
+`-- LICENSE               # Licensing terms, if applicable</code></pre>
+<p>This structure is a starting point, not a rule. Smaller projects may need fewer folders. The important practice is to separate raw data from cleaned data, keep code in reusable scripts, and make outputs easy to find.</p>
+<p>Use separate scripts for major tasks, such as cleaning data, merging files, constructing variables, running models, and creating figures or tables. Quarto documents should then use those scripts and outputs to produce reports, slides, or papers.</p>
+<p>You can ask Codex or another AI assistant to follow the <a href="plan/research-folder-scaffold.md">research folder scaffold guide</a> (this is .md file that you can put it in your folder) to create the initial folder structure for your project. Then you can adjust the structure for each project as needed.</p>
 </section>
 <section id="project-context" class="level3">
 <h3 class="anchored" data-anchor-id="project-context">Project Context</h3>
-<p>Before analysis begins, create a short project context file, such as <code>project_context.md</code>. It should state:</p>
+<p>Before analysis begins, create a short project context file, such as <code>docs/context.md</code> or <code>project_context.md</code>. This file should explain the project well enough that a collaborator, future version of yourself, or AI coding assistant can understand the work before editing anything.</p>
+<p>The context file should include:</p>
 <ul>
-<li>the research goals,</li>
+<li>research question and motivation,</li>
 <li>data sources,</li>
 <li>expected outputs,</li>
+<li>folder structure,</li>
 <li>coding standards,</li>
 <li>validation checks,</li>
 <li>rules for using AI assistance.</li>
 </ul>
-<p>This file helps collaborators and AI assistants understand the project before editing code.</p>
+<p>Once the repository and context file exist, you can ask Codex or Claude Code to help scaffold the folder structure, draft starter scripts, or review whether the setup is complete. The assistant should follow the project context, but the researcher remains responsible for checking the structure and all generated files.</p>
 <hr>
 <p><a href="./research-workflow.html">Back to Research Workflow</a> | <a href="./install-tools.html">Last post: Research Workflow Tools: Install and Resources</a> | <a href="./ai-assisted-coding.html">Next post: AI-Assisted Coding</a></p>
 
