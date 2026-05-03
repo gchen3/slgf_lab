@@ -31,7 +31,7 @@ Use these short posts to learn the details of the workflow:
 
 1.  [Intro: Why do we need a new research workflow?](why-new-research-workflow.qmd)
 2.  [Research Workflow Tools: Install and Resources](install-tools.qmd)
-3.  [Initial Set Up](initial-setup.qmd)
+3.  [Initial Setup and Project Folder Scaffold](initial-setup.qmd)
 4.  [AI-Assisted Coding](ai-assisted-coding.qmd)
 5.  [Example Workflow](example-workflow.qmd)
 6.  [Report With Quarto](report-with-quarto.qmd)

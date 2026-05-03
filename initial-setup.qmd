@@ -1,34 +1,85 @@
 ---
-title: "Initial Set Up"
+title: "Initial Setup and Project Folder Scaffold"
 ---
 
-Each project should live in a dedicated folder and GitHub repository. The repository should include source code, Quarto reports, documentation, and non-sensitive derived outputs.
+Every research project should start in a dedicated project folder and, when possible, a matching GitHub repository. The goal is to keep data, code, documentation, reports, and outputs in one organized workspace that can be reviewed, backed up, and reproduced later.
 
-Use GitHub-first project creation when starting from scratch. Use a local-folder-first approach when existing files already need to be organized.
+The repository should include source code, Quarto reports, project documentation, and non-sensitive derived outputs. Do not commit confidential data, credentials, or large raw files.
 
-### Everyday Git Workflow
+### GitHub Workflow
 
-The everyday Git workflow is simple:
+If you are starting a new project, the simplest approach is to create the repository on GitHub first, then clone it to your computer. This keeps the local project folder and the remote GitHub repository connected from the beginning.
+
+If you already have project files on your computer, you can instead start from the local folder and connect it to a new GitHub repository later.
+
+The everyday Git workflow is:
 
 ``` text
 Edit -> Save -> Stage -> Commit -> Push
 ```
 
-Keep commits small and descriptive. Do not commit confidential data, credentials, or large raw files; specify these in `.gitignore` to prevent them from being tracked.
+Use small, descriptive commits. A commit should represent one meaningful unit of work, such as cleaning one dataset, adding one figure, or revising one section of a report. Smaller commits make it easier to understand what changed and to recover from mistakes.
+
+Use `.gitignore` to keep files out of Git when they should not be tracked. This usually includes confidential data, raw data that cannot be shared, passwords, API keys, temporary files, and very large outputs.
+
+If you are new to GitHub, start with GitHub's [Hello World guide](https://docs.github.com/en/get-started/start-your-journey/hello-world), then read the overview of [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow). For a more hands-on guide, especially if you use R, read the Happy Git with R section on [getting started with GitHub](https://happygitwithr.com/usage-intro). Chapters 15-19 are useful for creating a first repository and connecting it to a local project folder.
+
+After working through those basics, return to this page and set up the folder structure for your own research project.
+
+### Folder Structure
+
+A typical research project folder can use this structure:
+
+``` text
+project-name/
+|-- data/
+|   |-- raw/              # Original data; do not edit directly
+|   |-- interim/          # Intermediate files created during cleaning
+|   `-- processed/        # Cleaned or analysis-ready datasets
+|-- code/
+|   |-- notebooks/        # Exploratory analysis and prototyping
+|   |-- scripts/          # Reusable scripts for cleaning and analysis
+|   |-- src/              # Project functions or reusable code
+|   `-- tests/            # Validation checks
+|-- output/
+|   |-- figures/          # Generated plots and charts
+|   |-- tables/           # Generated tables and summaries
+|   `-- models/           # Model outputs, if needed
+|-- reports/
+|   |-- drafts/           # Working versions of papers or reports
+|   |-- final/            # Finalized reports
+|   `-- presentations/    # Slides and presentation files
+|-- docs/
+|   |-- plan.md           # Project goals, milestones, and tasks
+|   |-- context.md        # Background, assumptions, and scope
+|   `-- references.md     # Key references and notes
+|-- README.md             # Project overview and instructions
+|-- .gitignore            # Files Git should ignore
+`-- LICENSE               # Licensing terms, if applicable
+```
+
+This structure is a starting point, not a rule. Smaller projects may need fewer folders. The important practice is to separate raw data from cleaned data, keep code in reusable scripts, and make outputs easy to find.
+
+Use separate scripts for major tasks, such as cleaning data, merging files, constructing variables, running models, and creating figures or tables. Quarto documents should then use those scripts and outputs to produce reports, slides, or papers.
+
+You can ask Codex or another AI assistant to follow the [research folder scaffold guide](plan/research-folder-scaffold.md) (this is .md file that you can put it in your folder) to create the initial folder structure for your project. Then you can adjust the structure for each project as needed.
 
 ### Project Context
 
-Before analysis begins, create a short project context file, such as `project_context.md`. It should state:
+Before analysis begins, create a short project context file, such as `docs/context.md` or `project_context.md`. This file should explain the project well enough that a collaborator, future version of yourself, or AI coding assistant can understand the work before editing anything.
 
--   the research goals,
+The context file should include:
+
+-   research question and motivation,
 -   data sources,
 -   expected outputs,
+-   folder structure,
 -   coding standards,
 -   validation checks,
 -   rules for using AI assistance.
 
-This file helps collaborators and AI assistants understand the project before editing code.
+Once the repository and context file exist, you can ask Codex or Claude Code to help scaffold the folder structure, draft starter scripts, or review whether the setup is complete. The assistant should follow the project context, but the researcher remains responsible for checking the structure and all generated files.
 
----
+------------------------------------------------------------------------
 
-[Back to Research Workflow](research-workflow.qmd) | [Last post: Research Workflow Tools: Install and Resources](install-tools.qmd) | [Next post: AI-Assisted Coding](ai-assisted-coding.qmd)
+[Back to Research Workflow](research-workflow.qmd) \| [Last post: Research Workflow Tools: Install and Resources](install-tools.qmd) \| [Next post: AI-Assisted Coding](ai-assisted-coding.qmd)
