@@ -48,6 +48,6 @@ Analysis should be incremental. Run the code after each major change and check:
 
 Commit the project after a meaningful unit of work is complete and the output has been reviewed.
 
----
+------------------------------------------------------------------------
 
-[Back to Research Workflow](research-workflow.qmd) | [Last post: AI-Assisted Coding](ai-assisted-coding.qmd) | [Next post: Report With Quarto](report-with-quarto.qmd)
+[Back to Research Workflow](research-workflow.qmd) \| [Last post: AI-Assisted Coding](ai-assisted-coding.qmd) \| [Next post: Report With Quarto](report-with-quarto.qmd)

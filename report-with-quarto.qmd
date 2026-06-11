@@ -2,7 +2,15 @@
 title: "Report With Quarto"
 ---
 
-Use Quarto to combine explanation, code, tables, figures, and results in a single reproducible document. Quarto reports can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports.
+Use Quarto to combine explanation, code, tables, figures, and results in a single reproducible document.
+
+[https://drganghe.github.io/quarto-academic-site-examples.htmlhttps://drganghe.github.io/quarto-academic-site-examples.html](https://drganghe.github.io/quarto-academic-site-examples.html)
+
+[html](https://quarto.org/docs/journals/formats.html)
+
+<https://quarto.org/docs/presentations/revealjs/>
+
+Quarto reports can be rendered to HTML for websites and review, or to PDF and Word for manuscripts and reports.
 
 Quarto can also be used to generate Beamer slides for research presentations. Regression results, tables, and figures should preferably be generated with Quarto and exported as PDF files to improve reproducibility.
 
@@ -18,6 +26,6 @@ Data + code -> Quarto report -> Rendered tables, figures, paper, or slides
 
 When the data or model changes, rerender the Quarto document so the report reflects the current analysis.
 
----
+------------------------------------------------------------------------
 
-[Back to Research Workflow](research-workflow.qmd) | [Last post: Example Workflow](example-workflow.qmd)
+[Back to Research Workflow](research-workflow.qmd) \| [Last post: Example Workflow](example-workflow.qmd)

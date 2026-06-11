@@ -13,14 +13,14 @@ Good research workflow should make each project:
 -   **Readable:** data notes, code, outputs, and interpretation are organized in one project.
 -   **Recoverable:** mistakes can be corrected without losing prior work.
 -   **Collaborative:** work can be shared, reviewed, and improved through GitHub.
--   **Human-led:** AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.
+-   **AI-assisted, Human-led:** AI tools can assist with coding and review, but researchers remain responsible for design, interpretation, and judgment.
 
 ### Recommended Toolchain
 
 The lab's default workflow combines:
 
 -   **Positron** or **VS Code:** an integrated development environment for R, Python, Quarto, and Git.
--   **R or Python:** statistical programming languages for data cleaning, analysis, modeling, and visualization.
+-   **R** and/or **Python:** statistical programming languages for data cleaning, analysis, modeling, and visualization.
 -   **Quarto:** reproducible reporting for combining text, code, tables, figures, and results.
 -   **Git and GitHub:** version control, backup, collaboration, and publication workflows.
 -   **AI coding assistants:** Codex, Claude Code, or GitHub Copilot for planning, coding support, debugging, and review.
@@ -36,4 +36,6 @@ Use these short posts to learn the details of the workflow:
 5.  [Example Workflow](example-workflow.qmd)
 6.  [Report With Quarto](report-with-quarto.qmd)
 
-###
+### How to use this guide?
+
+This guide is designed for researchers, collaborators, and students of the State and Local Government Finance Research Lab. It is also a community learning project where I share my learning experiences and resources. Feel free to use, share, and contribute to this guide. If you have questions, suggestions, or want to collaborate on improving the workflow, please reach out to me at [gchen3\@albany.edu](mailto:gchen3@albany.edu).
